@@ -1,0 +1,59 @@
+{
+	"name": "@wotzebra/oxc-config",
+	"version": "0.1.3",
+	"description": "Shared oxlint, oxfmt and ESLint configuration for Nuxt 4 projects",
+	"author": "Pieterjan Maes",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wotzebra/oxc-config.git"
+	},
+	"type": "module",
+	"files": [
+		"oxlint.js",
+		"oxlint.d.ts",
+		"oxfmt.js",
+		"oxfmt.d.ts",
+		"eslint.js",
+		"eslint.d.ts"
+	],
+	"exports": {
+		"./oxlint": {
+			"types": "./oxlint.d.ts",
+			"default": "./oxlint.js"
+		},
+		"./oxfmt": {
+			"types": "./oxfmt.d.ts",
+			"default": "./oxfmt.js"
+		},
+		"./eslint": {
+			"types": "./eslint.d.ts",
+			"default": "./eslint.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"format": "oxfmt",
+		"format:check": "oxfmt --check"
+	},
+	"peerDependencies": {
+		"@nuxt/eslint-plugin": ">=1.0.0",
+		"eslint": ">=9.0.0",
+		"eslint-plugin-jsonc": ">=2.0.0",
+		"eslint-plugin-oxlint": ">=1.0.0",
+		"oxfmt": ">=0.60.0",
+		"oxlint": ">=1.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@nuxt/eslint-plugin": { "optional": true },
+		"eslint": { "optional": true },
+		"eslint-plugin-jsonc": { "optional": true },
+		"eslint-plugin-oxlint": { "optional": true }
+	},
+	"devDependencies": {
+		"oxfmt": "^0.68.0"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}
